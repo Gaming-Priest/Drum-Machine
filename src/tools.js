@@ -11,9 +11,11 @@ const Tools = (props) => {
       <input
       className="volume-progress"
       type="range"
+      onChange={props.adjustVol}
       max="1"
       min="0"
       step="0.01"
+      value={props.volueVal}
       />
       
       <div id="switch-drum"
