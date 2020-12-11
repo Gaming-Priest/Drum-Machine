@@ -2,9 +2,12 @@ import React from 'react';
 import './res/stylesheet/style.css'
 const Tools = (props) => {
   return (
-    <div className="tools">
-      <div className="toggler">
-      <div onClick={props.powerDrum} style={props.powerStyle} className="switch" ></div>
+    <React.Fragment>
+      <div>
+        <h6 className="label">POWER</h6> 
+        <div className="toggler">
+        <div onClick={props.powerDrum} style={props.powerStyle} className="switch" ></div>
+        </div>
       </div>
       <div id="display">{props.display}</div>
       
@@ -17,12 +20,14 @@ const Tools = (props) => {
       step="0.01"
       value={props.volueVal}
       />
-      
+      <div>
+    <h6 className="label">SETS</h6> 
       <div id="switch-drum"
       className="toggler">
       <div onClick={props.switchDrum} style={props.faceStyle} className="switch"></div>
       </div>
       </div>
+    </React.Fragment>
   )
 
 }
